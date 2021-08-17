@@ -32,7 +32,7 @@ module Spina
     end
     
     def content_type(image)
-      image.file.content_type.split("/").last
+      image.file.content_type&.split("/")&.last
     end
 
   end
